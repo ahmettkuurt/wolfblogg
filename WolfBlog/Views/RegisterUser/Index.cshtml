@@ -1,0 +1,164 @@
+﻿@using sstoktakip.Models
+@model UserSignUpViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <h3 class="tittle">Yeni Bir Hesap Oluşturun</h3>
+        <div class="row inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+                <form method="post">
+                    <div class="form-group">
+                        <span asp-validation-for="@Model.NameSurname" class="text-danger"></span>
+                        @Html.TextBoxFor(x=>x.NameSurname,new {@placeholder="Adınız Soyadınız",@type="text",@class="form-control"})
+                    </div>
+                    <br />
+
+                    <div class="form-group">
+                        <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                        @Html.TextBoxFor(x=>x.UserName,new {@placeholder="Kullanıcı Adınız",@type="text",@class="form-control"})
+                    </div>
+                    <br />
+
+                    <div class="form-group">
+                        <span asp-validation-for="@Model.Mail" class="text-danger"></span>
+                        @Html.TextBoxFor(x=>x.Mail,new {@placeholder="Mail Adresiniz",@type="email",@class="form-control"})
+                    </div>
+                    <br />
+
+                    <div class="form-group">
+                        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                        @Html.TextBoxFor(x=>x.Password,new {@placeholder="Şifreniz",@type="password",@class="form-control"})
+                    </div>
+                    <br />
+
+                    <div class="form-group">
+                        <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
+                        @Html.TextBoxFor(x=>x.ConfirmPassword,new {@placeholder="Şifre Tekrarı",@type="password",@class="form-control"})
+                    </div>
+                    <br />
+
+                    <div class="form-check mb-2">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Kullanım Şartlarını Okudum,Onaylıyorum</label>
+                    </div>
+                    <br />
+
+                    <button type="submit" class="btn btn-primary submit mb-4">Kayıt Ol</button>
+                    <p><a href="~/Login/Index/"> Bir Hesabın Yok mu?</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | Register</title>
+
+    <link href="~/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="~/admin/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="~/admin/css/animate.css" rel="stylesheet">
+    <link href="~/admin/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen   animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">IN+</h1>
+
+            </div>
+            <h3>Kayıt Ekranı</h3>
+            <p>Yeni Bir Hesap Oluşturun. </p>
+            <form class="m-t" method="post">
+                <div class="form-group">
+                    <span asp-validation-for="@Model.NameSurname" class="text-danger"></span>
+                    @Html.TextBoxFor(x=>x.NameSurname,new {@placeholder="Adınız Soyadınız",@type="text",@class="form-control"})
+                </div>
+                <div class="form-group">
+                    <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                    @Html.TextBoxFor(x=>x.UserName,new {@placeholder="Kullanıcı Adınız",@type="text",@class="form-control"})
+                </div>
+                <div class="form-group">
+                    <span asp-validation-for="@Model.Mail" class="text-danger"></span>
+                    @Html.TextBoxFor(x=>x.Mail,new {@placeholder="Mail Adresiniz",@type="email",@class="form-control"})
+                </div>
+                <div class="form-group">
+                    <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                    @Html.TextBoxFor(x=>x.Password,new {@placeholder="Şifreniz",@type="password",@class="form-control"})
+                </div>
+                <div class="form-group">
+                    <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
+                    @Html.TextBoxFor(x=>x.ConfirmPassword,new {@placeholder="Şifre Tekrarı",@type="password",@class="form-control"})
+                </div>
+                <div class="form-group">
+                    <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Kullanım Şartlarını Okudum,Onaylıyorum </label></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary block full-width m-b">Kayıt Ol</button>
+
+                <p class="text-muted text-center"><small>Zaten Bir Hesabın Var Mı?</small></p>
+                <a class="btn btn-sm btn-white btn-block" href="/RegisterUser/Login/">Giriş Yap</a>
+
+                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            </form>
+            <p class="m-t"> <small>Copyright ©@DateTime.Now.Year<a href="https://www.yuchisoft.com" target="_blank">YuchisoftBlog</a> from yuchisoft.com | Tüm Hakları Saklıdır</small>  </p>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="~/admin/js/jquery-3.1.1.min.js"></script>
+    <script src="~/admin/js/popper.min.js"></script>
+    <script src="~/admin/js/bootstrap.js"></script>
+    <!-- iCheck -->
+    <script src="~/admin/js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+</body>
+
+</html>
+*@

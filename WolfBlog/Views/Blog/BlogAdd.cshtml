@@ -1,0 +1,31 @@
+﻿@model sstoktakip.Models.BlogAddİmage;
+@{
+    ViewData["Title"] = "BlogAdd";
+    Layout = "~/Views/Shared/Writerlayout.cshtml";
+}
+
+<h1>Yeni Blog Girişi</h1>
+<br />
+
+<form method="post" enctype="multipart/form-data">
+    @Html.Label("Blog Başlığı")
+    @Html.TextBoxFor(x=>x.BlogTitle,new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogTitle)
+    <br />
+    @Html.Label("Blog Görseli")
+    <input type="file" name="BlogImage" class="form-control" />
+
+    <br />
+    @Html.Label("Blog küçük Görsel")
+    <input type="file" name="BlogThumbnailImage" class="form-control" />
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.cv,"Kategori Seç",new {@class="form-control"})
+    <br />
+    @Html.Label("Blog İçeriği")
+    @Html.TextAreaFor(x=>x.BlogContent,15,3,new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogContent)
+    <br />
+    <button class="btn btn-info">Yazıyı Kaydet </button>
+
+</form>

@@ -1,0 +1,38 @@
+﻿@model UserUpdateViewModel
+@{
+    ViewData["Title"] = "WriterEditProfile";
+    Layout = "~/Views/Shared/Writerlayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yazar Profil Bilgilerini Düzenleme</h4>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputName1">Yazar Ad Soyad</label>
+                    @Html.TextBoxFor(x=>x.namesurname,new {@class="form-control",@type="text"})
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Yazar Kullanıcı Adı</label>
+                    @Html.TextBoxFor(x=>x.username,new {@class="form-control",@type="text"})
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Yazar Maili</label>
+                    @Html.TextBoxFor(x=>x.mail,new {@class="form-control",@type="email"})
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Yazar Şifresi</label>
+                    @Html.TextBoxFor(x=>x.password,new {@class="form-control"})
+                </div>
+                <div class="form-group">
+                    <label >Yazar Resmi</label>
+                    @Html.TextBoxFor(x=>x.imageurl,new {@class="form-control",@type="file"})
+                </div>
+                <button type="submit" class="btn btn-gradient-primary me-2">Güncelle</button>
+                <button class="btn btn-light">iptal</button>
+            </form>
+        </div>
+    </div>
+</div>
+

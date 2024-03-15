@@ -1,0 +1,13 @@
+﻿@model sstoktakip.Controllers.Class1;
+@{
+    ViewData["Title"] = "AddEmployee";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<form method="post">
+    @Html.Label("Çalışan Adı Soyadı")
+    @Html.TextBoxFor(x=>x.Name,new{@class="form-control"})
+    <br />
+    <button type="submit" class="btn btn-info">Çalışan Ekle</button>
+</form>

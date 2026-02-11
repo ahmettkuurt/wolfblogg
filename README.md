@@ -39,60 +39,12 @@ Bu proje aşağıdaki temel teknolojiler ve kütüphaneler kullanılarak gelişt
 *   **X.PagedList:** Veri listelerini sayfalara ayırmak için kütüphane.
 *   **Newtonsoft.Json:** JSON verileriyle çalışmak için popüler bir kütüphane.
 
-## Kurulum
-
-Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
-
-1.  **Depoyu Klonlayın:**
-
-    ```bash
-    git clone https://github.com/ahmettkuurt/wolfblogg.git
-    cd wolfblogg
-    ```
-
-2.  **Veritabanı Yapılandırması:**
-    *   `DataAccessLayer/Concrete/Context.cs` dosyasındaki bağlantı dizesini kendi SQL Server veritabanı ayarlarınıza göre güncelleyin.
-    *   Veritabanı geçişlerini (`migrations`) uygulamak için aşağıdaki komutları çalıştırın:
-
-        ```bash
-        dotnet ef database update --project DataAccessLayer
-        ```
-
-3.  **Projeleri Çalıştırın:**
-    *   `WolfBlog` ve `WolfBlogApi` projelerini Visual Studio veya .NET CLI üzerinden başlatın.
-
-        ```bash
-        # WolfBlog projesi için
-        cd WolfBlog
-        dotnet run
-
-        # WolfBlogApi projesi için (ayrı bir terminalde)
-        cd ../WolfBlogApi
-        dotnet run
-        ```
-
-    Uygulama genellikle `https://localhost:7xxx` adresinde çalışacaktır.
 
 ## Kullanım
 
 Uygulama başlatıldıktan sonra, web tarayıcınızdan erişebilirsiniz. Yönetici paneline giriş yaparak blog yazılarını, kategorileri, yorumları ve kullanıcıları yönetebilirsiniz. Yazarlar kendi blog yazılarını oluşturabilir ve düzenleyebilirler.
 
-## Katkıda Bulunma
-
-Katkılarınız için teşekkür ederiz! Projeye katkıda bulunmak isterseniz, lütfen aşağıdaki adımları izleyin:
-
-1.  Depoyu forklayın.
-2.  Yeni bir özellik veya hata düzeltmesi için yeni bir dal (branch) oluşturun (`git checkout -b feature/AmazingFeature`).
-3.  Değişikliklerinizi yapın ve commit edin (`git commit -m 'Add some AmazingFeature'`).
-4.  Dalınızı uzak depoya (remote) push edin (`git push origin feature/AmazingFeature`).
-5.  Bir Pull Request (Çekme İsteği) açın.
-
-## Lisans
-
-Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
 
 ## İletişim
 
-Ahmet Kurt - [ahmettkurt@example.com](mailto:ahmettkurt@example.com)
-
-Proje Bağlantısı: [https://github.com/ahmettkuurt/wolfblogg](https://github.com/ahmettkuurt/wolfblogg)
+Ahmet Kurt - [ahmetkrt894@gmail.com](mailto:ahmetkrt894@gmail.com)
